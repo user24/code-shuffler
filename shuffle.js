@@ -1,21 +1,24 @@
 // Define possible operations
 const ops = [
+  input => input ^ 2,
+  input => Math.pow(input, 2),
+  input => input * 12,
+  input => input / 2,
+  input => Math.PI * input,
+  input => input * 2,
+  input => input + input,
+  input => input * input,
+  input => Math.PI + input,
   input => Math.round(input),
   input => Math.floor(input),
   input => Math.ceil(input),
-  input => input + 1,
-  input => input * 52,
-  input => input / 4,
-  input => input * 2,
-  input => (input + 52) % 52,
-  input => Math.round((input / (52 / 12)) * 2) + 1,
-  input => Math.ceil((input / 52) * 24)
+  input => input / Math.PI,
 ];
 
-// What goes in
-const inputs = [2, 4, 6, 8];
-// What needs to come out
-const targets = [5, 9, 13, 17];
+// What goes in (in this example radiuses)
+const inputs = [10, 15, 200, 17, 9, 301];
+// What needs to come out (in this example, areas, rounded)
+const targets = [314, 707, 125664, 908, 254, 284631];
 // Max number of operations in the chain
 const maxOps = 10;
 // How many times to try to find a solution
