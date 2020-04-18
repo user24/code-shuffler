@@ -1,4 +1,4 @@
-# code-shuffler
+# formula-finder
 [Genetic programming](https://en.wikipedia.org/wiki/Genetic_programming) diluted. Takes an array of inputs and finds which combination of operations is needed to produce the desired outputs.
 
 ## Example
