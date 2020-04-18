@@ -55,7 +55,7 @@ If you're not getting any successes, try expanding the list of operations, e.g. 
 
 * I'd like it to be able to accept multiple arguments more easily, and update it to be able to learn the pythagorean theorem.
 * I'd like to turn it into a real genetic programming example, instead of just brute force.
-* There's a tonne of optimisations to the basic brute forcer, for instead de-duping successes, returning early when one of the inputs doesn't match the target.
+* There's a tonne of optimisations to the basic brute forcer, for instance de-duping successes, or returning early when one of the inputs doesn't match the target.
 * Would like it to take inputs and targets from the commandline. Maybe read ops from a file.
 * I'd like it to be able to say "OK, I didn't find exactly what you wanted but here's the *closest* I got". Then I can update the example to remove PI completely and it should be able to find out that multiplying by 3 gets us close to the right formula.
 * Condense output code so that it can output a one-liner instead of the array of ops.
