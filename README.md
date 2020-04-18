@@ -74,3 +74,4 @@ If you're not getting any successes, try expanding the list of operations, e.g. 
 * I'd like it to be able to accept multiple arguments more easily, and update it to be able to learn the pythagorean theorem.
 * I'd like to turn it into a real genetic programming example, instead of just brute force.
 * There's a tonne of optimisations to the basic brute forcer, for instead de-duping successes.
+* Would like it to take inputs and targets from the commandline. Maybe read ops from a file.
