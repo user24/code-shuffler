@@ -3,33 +3,15 @@
 
 ## Example
 
-If we give it a bunch of circle radius measurements as inputs:
+If all we know is a bunch of radiuses of circles:
 
 `const inputs = [10, 15, 200, 17, 9, 301];`
 
-and tell it the corresponding areas, rounded to the nearest integer:
+and the areas of those circles:
 
 `const targets = [314, 707, 125664, 908, 254, 284631];`
 
-It will be able to tell us what the relation between input and output is, so long as we ensure the basic operations are somewhere in the list of possibles;
-
-```
-const ops = [
-  input => input ^ 2,
-  input => Math.pow(input, 2),
-  input => input * 12,
-  input => input / 2,
-  input => Math.PI * input,
-  input => input * 2,
-  input => input + input,
-  input => input * input,
-  input => Math.PI + input,
-  input => Math.round(input),
-  input => Math.floor(input),
-  input => Math.ceil(input),
-  input => input / Math.PI,
-];
-```
+This program can find the formula for us.
 
 Output:
 
@@ -41,7 +23,7 @@ Output:
 ]
 ```
 
-Typically you'll want the shortest successful chain, but it does outputs all successful chains just in case. These usually contain no-ops, or operations that cancel each other out, such as this:
+Typically you'll want the shortest successful chain, but it does output all successful chains just in case. These usually contain no-ops, or operations that cancel each other out. Example:
 
 ```
 [
@@ -57,7 +39,7 @@ Typically you'll want the shortest successful chain, but it does outputs all suc
 
 ## How it works
 
-It just takes a list of basic operations, like `return input + 1`, `return input * 2`, etc, and creates thousands of random-length chains of those operations, chosen randomly.
+It just takes a list of basic operations, like `return input + 1`, `return PI * input`, etc, and creates thousands of random-length chains of those operations, chosen randomly.
 Then, we simply run the chain on each input, and when we find a chain that produces the correct output for all inputs, we record it.
 Finally, we output the successful chains from longest to shortest.
 
@@ -73,5 +55,6 @@ If you're not getting any successes, try expanding the list of operations, e.g. 
 
 * I'd like it to be able to accept multiple arguments more easily, and update it to be able to learn the pythagorean theorem.
 * I'd like to turn it into a real genetic programming example, instead of just brute force.
-* There's a tonne of optimisations to the basic brute forcer, for instead de-duping successes.
+* There's a tonne of optimisations to the basic brute forcer, for instead de-duping successes, returning early when one of the inputs doesn't match the target.
 * Would like it to take inputs and targets from the commandline. Maybe read ops from a file.
+* I'd like it to be able to say "OK, I didn't find exactly what you wanted but here's the *closest* I got". Then I can update the example to remove PI completely and it should be able to find out that multiplying by 3 gets us close to the right formula.
