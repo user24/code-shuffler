@@ -49,7 +49,7 @@ If you have a situation where you know your function needs to return 5 when give
 
 ## Hints
 
-If you're not getting any successes, try expanding the list of operations, e.g. adding `input => input * 3`, or 'best-guesses' relating to your domain, e.g. `input => input * Math.PI` if you think that operation might be involved in the answer somehow.
+If you're not getting any successes, try expanding the list of operations, e.g. adding `input => input * 3`, or 'best-guesses' relating to your domain, e.g. `input => input * Math.PI` if you think that operation might be involved in the answer somehow. If at first you don't suceed, try just running it again. It is based on randomness and if it's a tricky problem it might require a few runs through to hit upon an answer.
 
 ## Future Work
 
