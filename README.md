@@ -49,7 +49,10 @@ If you have a situation where you know your function needs to return 5 when give
 
 ## Hints
 
-If you're not getting any successes, try expanding the list of operations, e.g. adding `input => input * 3`, or 'best-guesses' relating to your domain, e.g. `input => input * Math.PI` if you think that operation might be involved in the answer somehow. If at first you don't suceed, try just running it again. It is based on randomness and if it's a tricky problem it might require a few runs through to hit upon an answer.
+Before running, make sure the list of operations includes your best guesses as to what might be involved in the answer, e.g. adding `input => input * 3`, or `input => input * Math.PI`. If you have absolutely no idea, throw as many basic operations as you can think of into the mix and cross your fingers.
+If it doesn't find anything at first, try just running it again (or increasing `attempts`; same effect). It is based on randomness and if it's a tricky problem it might require a few runs through to hit upon an answer.
+Tweaking the `maxOps` variable might also help, but if the formula needs to contain more than 10 operations, you might need some actual genetic programming to reach the answer, as the likelihood of finding it by chance becomes slimmer the more ops you add - this is mitigated by increasing `attempts`, at the cost of speed.
+
 
 ## Future Work
 
