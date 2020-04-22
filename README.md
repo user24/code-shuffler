@@ -40,7 +40,9 @@ Typically you'll want the shortest successful chain, but it does output all succ
 ## How it works
 
 It just takes a list of basic operations, like `return input + 1`, `return PI * input`, etc, and creates thousands of random-length chains of those operations, chosen randomly.
+
 Then, we simply run the chain on each input, and when we find a chain that produces the correct output for all inputs, we record it.
+
 Finally, we output the successful chains from longest to shortest.
 
 ## When it's useful
@@ -50,7 +52,9 @@ If you have a situation where you know your function needs to return 5 when give
 ## Hints
 
 Before running, make sure the list of operations includes your best guesses as to what might be involved in the answer, e.g. adding `input => input * 3`, or `input => input * Math.PI`. If you have absolutely no idea, throw as many basic operations as you can think of into the mix and cross your fingers.
+
 If it doesn't find anything at first, try just running it again (or increasing `attempts`; same effect). It is based on randomness and if it's a tricky problem it might require a few runs through to hit upon an answer.
+
 Tweaking the `maxOps` variable might also help, but if the formula needs to contain more than 10 operations, you might need some actual genetic programming to reach the answer, as the likelihood of finding it by chance becomes slimmer the more ops you add - this is mitigated by increasing `attempts`, at the cost of speed.
 
 
