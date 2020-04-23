@@ -1,0 +1,8 @@
+{
+  "name": "formula-finder",
+  "author": "Howard Yeend",
+  "homepage": "https://github.com/user24/formula-finder",
+  "dependencies": {
+    "commander": "^4.1.1"
+  }
+}
